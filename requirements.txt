@@ -1,0 +1,6 @@
+# Pinned to the versions the scanner is verified against. web3 6.x and 7.x have
+# incompatible APIs, so an open lower bound can resolve to a version that breaks
+# the middleware and ABI calls in research.py / pool_state.py.
+web3==7.16.0
+python-dotenv==1.2.2
+requests==2.34.2

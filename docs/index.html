@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polygon Flash-Loan Arbitrage Scanner</title>
+<style>
+  :root {
+    color-scheme: light;
+    --surface-1: #fcfcfb;
+    --plane: #f9f9f7;
+    --text-primary: #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted: #898781;
+    --grid: #e1e0d9;
+    --baseline: #c3c2b7;
+    --border: rgba(11,11,11,0.10);
+    --series-1: #2a78d6;
+    --series-2: #eb6834;
+    --series-3: #1baf7a;
+    --seq-100: #cde2fb;
+    --seq-250: #86b6ef;
+    --seq-450: #2a78d6;
+    --seq-600: #184f95;
+    --good: #0ca30c;
+    --warning: #fab219;
+    --critical: #d03b3b;
+    --track: #cde2fb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --surface-1: #1a1a19;
+      --plane: #0d0d0d;
+      --text-primary: #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted: #898781;
+      --grid: #2c2c2a;
+      --baseline: #383835;
+      --border: rgba(255,255,255,0.10);
+      --series-1: #3987e5;
+      --series-2: #d95926;
+      --series-3: #199e70;
+      --seq-450: #3987e5;
+      --track: #184f95;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --surface-1: #1a1a19;
+    --plane: #0d0d0d;
+    --text-primary: #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted: #898781;
+    --grid: #2c2c2a;
+    --baseline: #383835;
+    --border: rgba(255,255,255,0.10);
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --series-3: #199e70;
+    --seq-450: #3987e5;
+    --track: #184f95;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--plane);
+    color: var(--text-primary);
+    font: 15px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 20px 72px; }
+
+  header { margin-bottom: 28px; }
+  h1 { font-size: 1.5rem; font-weight: 650; margin: 0 0 6px; letter-spacing: -0.01em; }
+  .sub { color: var(--text-secondary); margin: 0; font-size: 0.94rem; }
+  .stamp { color: var(--text-muted); font-size: 0.82rem; margin-top: 10px; }
+
+  .card {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 18px;
+  }
+  h2 {
+    font-size: 0.78rem; font-weight: 650; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--text-secondary);
+    margin: 0 0 4px;
+  }
+  .note { color: var(--text-secondary); font-size: 0.88rem; margin: 0 0 16px; }
+
+  .hero { font-size: 3.2rem; font-weight: 660; line-height: 1.05; letter-spacing: -0.02em; }
+  .hero-cap { color: var(--text-secondary); font-size: 0.9rem; margin-top: 2px; }
+
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; }
+  .kpi { }
+  .kpi .label { color: var(--text-secondary); font-size: 0.82rem; }
+  .kpi .val { font-size: 1.5rem; font-weight: 640; letter-spacing: -0.01em; }
+  .kpi .foot { color: var(--text-muted); font-size: 0.78rem; }
+
+  .meter-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .meter-pct { font-size: 1.05rem; font-weight: 640; font-variant-numeric: tabular-nums; }
+  .track {
+    height: 10px; border-radius: 5px; background: var(--track);
+    overflow: hidden; margin: 10px 0 8px;
+  }
+  .fill { height: 100%; border-radius: 5px; background: var(--seq-450); transition: width .4s ease; }
+  .meter-foot { color: var(--text-muted); font-size: 0.82rem; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+  th {
+    text-align: left; font-weight: 600; color: var(--text-secondary);
+    font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em;
+    padding: 0 10px 8px 0; border-bottom: 1px solid var(--baseline);
+  }
+  td { padding: 8px 10px 8px 0; border-bottom: 1px solid var(--grid); }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+  tbody tr:last-child td { border-bottom: none; }
+
+  .swatch {
+    display: inline-block; width: 9px; height: 9px; border-radius: 2px;
+    margin-right: 7px; vertical-align: baseline;
+  }
+  .legend { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 14px; font-size: 0.84rem; color: var(--text-secondary); }
+  .legend span.k { display: inline-flex; align-items: center; }
+
+  .bar-row { display: grid; grid-template-columns: 108px 1fr 92px; gap: 10px; align-items: center; margin-bottom: 8px; }
+  .bar-label { color: var(--text-secondary); font-size: 0.85rem; }
+  .bar-track { background: transparent; }
+  .bar { height: 20px; border-radius: 0 4px 4px 0; }
+  .bar-val { text-align: right; font-variant-numeric: tabular-nums; font-size: 0.85rem; color: var(--text-secondary); }
+
+  .banner {
+    border-left: 3px solid var(--warning);
+    padding: 12px 14px; border-radius: 0 6px 6px 0;
+    background: color-mix(in oklab, var(--warning) 8%, var(--surface-1));
+    font-size: 0.89rem; color: var(--text-secondary); margin-bottom: 18px;
+  }
+  .banner strong { color: var(--text-primary); }
+  .pill {
+    display: inline-block; font-size: 0.72rem; font-weight: 600;
+    padding: 2px 8px; border-radius: 999px; letter-spacing: 0.02em;
+    border: 1px solid var(--border); color: var(--text-secondary);
+  }
+  .neg { color: var(--critical); }
+  .toggle {
+    position: fixed; top: 14px; right: 14px; z-index: 10;
+    background: var(--surface-1); color: var(--text-secondary);
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 6px 11px; font: inherit; font-size: 0.8rem; cursor: pointer;
+  }
+  svg { display: block; overflow: visible; max-width: 100%; }
+  .scroll-x { overflow-x: auto; }
+  footer { color: var(--text-muted); font-size: 0.82rem; margin-top: 32px; }
+  a { color: var(--series-1); }
+  @media (max-width: 620px) {
+    .hero { font-size: 2.4rem; }
+    .bar-row { grid-template-columns: 84px 1fr 76px; }
+  }
+</style>
+</head>
+<body>
+<button class="toggle" id="themeBtn" type="button">Dark</button>
+<div class="wrap" id="app">
+  <p class="sub">Loading…</p>
+</div>
+<!--CONTINUE_SITE_BODY_1-->
+<script>
+(function () {
+  var root = document.documentElement, btn = document.getElementById('themeBtn');
+  function stored() { try { return localStorage.getItem('theme'); } catch (e) { return null; } }
+  function prefersDark() { return matchMedia('(prefers-color-scheme: dark)').matches; }
+  function isDark() { var t = root.getAttribute('data-theme'); return t ? t === 'dark' : prefersDark(); }
+  function paint() { btn.textContent = isDark() ? 'Light' : 'Dark'; }
+  var s = stored(); if (s) root.setAttribute('data-theme', s);
+  paint();
+  btn.addEventListener('click', function () {
+    var next = isDark() ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    paint();
+    if (window.__data) render(window.__data);
+  });
+
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) {
+    return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]; }); };
+  var usd = function (n) {
+    if (n == null) return '—';
+    if (n >= 1e6) return '$' + (n / 1e6).toFixed(1) + 'M';
+    if (n >= 1e3) return '$' + Math.round(n / 1e3) + 'K';
+    return '$' + Math.round(n);
+  };
+  var pct = function (n, d) { return (n == null) ? '—' : (n >= 0 ? '+' : '') + n.toFixed(d == null ? 4 : d) + '%'; };
+  var num = function (n) { return n == null ? '—' : n.toLocaleString(); };
+  var cssv = function (name) { return getComputedStyle(document.body).getPropertyValue(name).trim(); };
+
+  function ago(iso) {
+    if (!iso) return '';
+    var mins = Math.max(0, (Date.now() - new Date(iso).getTime()) / 60000);
+    if (mins < 60) return Math.round(mins) + ' min ago';
+    var h = mins / 60;
+    if (h < 48) return h.toFixed(1) + ' h ago';
+    return Math.round(h / 24) + ' d ago';
+  }
+
+  // ---- Depth by venue: magnitude comparison, so one sequential hue ----
+  function venueBars(byVenue) {
+    if (!byVenue || !byVenue.length) return '';
+    var max = Math.max.apply(null, byVenue.map(function (v) { return v.depthUsd; }));
+    return byVenue.map(function (v) {
+      var w = max > 0 ? Math.max(2, (v.depthUsd / max) * 100) : 0;
+      return '<div class="bar-row">' +
+        '<div class="bar-label">' + esc(v.venue) + '</div>' +
+        '<div class="bar-track"><div class="bar" style="width:' + w.toFixed(1) + '%;background:var(--seq-450)"></div></div>' +
+        '<div class="bar-val">' + usd(v.depthUsd) + ' · ' + v.count + '</div>' +
+        '</div>';
+    }).join('');
+  }
+
+  // ---- Cycle returns vs hurdle: polarity against a threshold ----
+  function cycleChart(cycles, hurdle) {
+    if (!cycles || !cycles.best || !cycles.best.length) return '';
+    var rows = cycles.best.slice(0, 10);
+    var vals = rows.map(function (r) { return r.grossPct; });
+    // Anchor the scale on zero and the hurdle so "how far below break-even"
+    // is the thing the eye measures. Without the explicit 0 anchor the bars
+    // float mid-plot and the threshold line reads as unrelated to them.
+    var lo = Math.min.apply(null, vals.concat([0, hurdle]));
+    var hi = Math.max.apply(null, vals.concat([0, hurdle]));
+    var pad = (hi - lo) * 0.18 || 0.001;
+    lo -= pad; hi += pad * 1.6;
+    var W = 720, rowH = 26, H = rows.length * rowH + 34, labelW = 210, plotW = W - labelW - 70;
+    var x = function (v) { return labelW + ((v - lo) / (hi - lo)) * plotW; };
+    var zx = x(0), hx = x(hurdle);
+    var crit = cssv('--critical'), muted = cssv('--text-muted'), sec = cssv('--text-secondary');
+
+    var svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" width="100%" height="' + H + '" role="img" aria-label="Best cycle returns, all below the break-even hurdle">';
+    // hurdle marker first, zero baseline last, so the baseline stays visible
+    svg += '<line x1="' + hx + '" y1="4" x2="' + hx + '" y2="' + (H - 26) + '" stroke="' + cssv('--warning') + '" stroke-width="1.5"/>';
+    svg += '<text x="' + hx + '" y="' + (H - 12) + '" fill="' + muted + '" font-size="11" text-anchor="middle">break-even ' + hurdle.toFixed(4) + '%</text>';
+
+    rows.forEach(function (r, i) {
+      var y = 8 + i * rowH, bh = 14;
+      var xv = x(r.grossPct);
+      var bx = Math.min(xv, zx), bw = Math.max(1.5, Math.abs(zx - xv));
+      svg += '<text x="0" y="' + (y + bh - 3) + '" fill="' + sec + '" font-size="11.5">' + esc(r.route) + '</text>';
+      // rounded at the data end, square where it meets the zero baseline
+      svg += '<path d="M' + (bx + 4) + ' ' + y + ' h' + Math.max(0, bw - 4) + ' v' + bh + ' h-' + Math.max(0, bw - 4) +
+             ' a4,4 0 0 1 -4,-4 v-' + (bh - 8) + ' a4,4 0 0 1 4,-4 z" fill="' + crit + '"/>';
+      svg += '<text x="' + (bx - 6) + '" y="' + (y + bh - 3) + '" fill="' + sec + '" font-size="11" text-anchor="end">' + r.grossPct.toFixed(4) + '%</text>';
+    });
+    svg += '<line x1="' + zx + '" y1="4" x2="' + zx + '" y2="' + (H - 26) + '" stroke="' + cssv('--baseline') + '" stroke-width="1"/>';
+    svg += '<text x="' + zx + '" y="' + (H - 12) + '" fill="' + muted + '" font-size="11" text-anchor="middle">0%</text>';
+    svg += '</svg>';
+    return '<div class="scroll-x">' + svg + '</div>';
+  }
+
+  function render(d) {
+    window.__data = d;
+    var c = d.cycles || {}, p = d.pools || {}, lg = d.logger;
+    var best = (c.best && c.best.length) ? c.best[0] : null;
+    var H = [];
+
+    H.push('<header>');
+    H.push('<h1>Polygon Flash-Loan Arbitrage Scanner</h1>');
+    H.push('<p class="sub">Live pool discovery, depth measurement, and cycle search across every major Polygon DEX venue.</p>');
+    H.push('<p class="stamp">Snapshot ' + esc(ago(d.generatedAt)) + ' · block ' + num(p.block) + ' · <span class="pill">DRY RUN — no trades executed</span></p>');
+    H.push('</header>');
+
+    var midHits = c.profitableAtMid || 0;
+    var screenNote = midHits
+      ? midHits + ' route' + (midHits === 1 ? '' : 's') + ' passed the mid-price screen, but ' +
+        (midHits === 1 ? 'it vanished' : 'they vanished') + ' once price impact was quoted exactly.'
+      : 'None cleared the ' + d.hurdlePct.toFixed(4) + '% break-even even before price impact.';
+    H.push('<div class="banner"><strong>No profitable arbitrage found.</strong> ' +
+      num(c.enumerated) + ' cycles were searched across ' + num(p.total) + ' pools. ' +
+      screenNote + ' Realised P&amp;L is <strong>$0.00</strong> — nothing has ever been traded.</div>');
+
+    // Hero: the single number the page leads with
+    // The hero must never show an unverified number. A screen hit that failed
+    // the exact re-quote is a false positive, so prefer the exact figure and
+    // say which one is on screen.
+    var heroVal, heroCap, heroCls;
+    var reQuoted = (c.best || []).filter(function (r) { return r.exactPct != null; });
+    if (reQuoted.length) {
+      var bx = reQuoted.reduce(function (a, r) { return r.exactPct > a.exactPct ? r : a; });
+      heroVal = pct(bx.exactPct);
+      heroCls = bx.exactPct > d.hurdlePct ? '' : 'neg';
+      heroCap = esc(bx.route) + ' · exact quote at ' + usd(c.confirmSizeUsd || 1000) +
+                ' — the mid-price screen showed ' + pct(bx.grossPct) + ' before impact';
+    } else if (best) {
+      heroVal = pct(best.grossPct);
+      heroCls = 'neg';
+      heroCap = esc(best.route) + ' · ' + esc(best.venues.join(' → ')) + ' · at mid price, before impact';
+    } else {
+      heroVal = '—'; heroCls = ''; heroCap = '';
+    }
+
+    H.push('<div class="card">');
+    H.push('<h2>Best cycle found</h2>');
+    H.push('<div class="hero ' + heroCls + '">' + heroVal + '</div>');
+    H.push('<div class="hero-cap">' + heroCap + '</div>');
+    H.push('</div>');
+
+    H.push('<div class="card"><div class="kpis">');
+    H.push('<div class="kpi"><div class="label">Pools tracked</div><div class="val">' + num(p.total) + '</div><div class="foot">≥ ' + usd(p.minDepthUsd) + ' depth</div></div>');
+    H.push('<div class="kpi"><div class="label">Cycles searched</div><div class="val">' + num(c.enumerated) + '</div><div class="foot">' + num(c.twoHop) + ' two-hop · ' + num(c.threeHop) + ' three-hop</div></div>');
+    H.push('<div class="kpi"><div class="label">Confirmed profitable</div><div class="val">' + num(c.profitable || 0) + '</div><div class="foot">' + num(c.profitableAtMid || 0) + ' passed the screen · re-quoted at ' + usd(c.confirmSizeUsd || 1000) + '</div></div>');
+    H.push('<div class="kpi"><div class="label">Total depth</div><div class="val">' + usd(p.totalDepthUsd) + '</div><div class="foot">across ' + (p.byVenue ? p.byVenue.length : 0) + ' venues</div></div>');
+    H.push('<div class="kpi"><div class="label">Realised P&amp;L</div><div class="val">$0.00</div><div class="foot">0 trades</div></div>');
+    H.push('</div></div>');
+
+    // Progress meter
+    if (lg) {
+      var prog = Math.max(0, Math.min(100, lg.progressPct));
+      H.push('<div class="card">');
+      H.push('<h2>Spread logger</h2>');
+      H.push('<p class="note">Sampling the best cross-venue round trip every 20 s to measure how often — and for how long — a spread clears break-even.</p>');
+      H.push('<div class="meter-head"><span class="bar-label">' + lg.hours.toFixed(1) + ' h of ' + lg.targetHours + ' h</span><span class="meter-pct">' + prog.toFixed(1) + '%</span></div>');
+      H.push('<div class="track"><div class="fill" style="width:' + prog.toFixed(2) + '%"></div></div>');
+      H.push('<div class="meter-foot">' + num(lg.observations) + ' observations · ' + num(lg.clearedTotal) + ' cleared break-even</div>');
+      H.push('</div>');
+    }
+
+    // Cycle chart + table view (relief for the contrast WARN)
+    if (c.best && c.best.length) {
+      H.push('<div class="card">');
+      H.push('<h2>Best cycles vs break-even</h2>');
+      H.push('<p class="note">Return at mid price, before price impact. Every bar sits left of zero: the routes lose money before a trade is even sized.</p>');
+      H.push(cycleChart(c, d.hurdlePct));
+      H.push('<div class="scroll-x" style="margin-top:16px"><table><thead><tr>' +
+        '<th>Route</th><th>Hops</th><th class="num">At mid</th><th class="num">Exact</th><th class="num">Depth cap</th><th>Venues</th>' +
+        '</tr></thead><tbody>');
+      c.best.slice(0, 10).forEach(function (r) {
+        var ex = r.exactPct == null
+          ? '<span style="color:var(--text-muted)">not re-quoted</span>'
+          : '<span class="' + (r.exactPct > d.hurdlePct ? '' : 'neg') + '">' + pct(r.exactPct) + '</span>';
+        H.push('<tr><td>' + esc(r.route) + '</td><td>' + r.hops + '</td>' +
+          '<td class="num' + (r.grossPct > d.hurdlePct ? '' : ' neg') + '">' + pct(r.grossPct) + '</td>' +
+          '<td class="num">' + ex + '</td>' +
+          '<td class="num">' + usd(r.capUsd) + '</td>' +
+          '<td>' + esc(r.venues.join(' · ')) + '</td></tr>');
+      });
+      H.push('</tbody></table></div></div>');
+    }
+
+    // Depth by venue
+    if (p.byVenue && p.byVenue.length) {
+      H.push('<div class="card">');
+      H.push('<h2>Liquidity by venue</h2>');
+      H.push('<p class="note">Measured on-chain, smaller side of each pool. Depth caps trade size long before the flash loan does.</p>');
+      H.push(venueBars(p.byVenue));
+      H.push('</div>');
+    }
+
+    // Logger per-pair table
+    if (lg && lg.pairs && lg.pairs.length) {
+      H.push('<div class="card">');
+      H.push('<h2>Round-trip spread by pair</h2>');
+      H.push('<p class="note">Best and median observed over ' + lg.hours.toFixed(1) + ' h. Break-even is ' + d.hurdlePct.toFixed(4) + '%.</p>');
+      H.push('<div class="scroll-x"><table><thead><tr><th>Pair</th><th class="num">Samples</th><th class="num">Best</th><th class="num">Median</th><th class="num">Cleared</th></tr></thead><tbody>');
+      lg.pairs.forEach(function (r) {
+        H.push('<tr><td>' + esc(r.pair) + '</td><td class="num">' + num(r.n) + '</td>' +
+          '<td class="num' + (r.best > d.hurdlePct ? '' : ' neg') + '">' + pct(r.best) + '</td>' +
+          '<td class="num neg">' + pct(r.median) + '</td>' +
+          '<td class="num">' + num(r.cleared) + '</td></tr>');
+      });
+      H.push('</tbody></table></div></div>');
+    }
+
+    // Deepest pools
+    if (p.top && p.top.length) {
+      H.push('<div class="card">');
+      H.push('<h2>Deepest pools</h2>');
+      H.push('<div class="scroll-x"><table><thead><tr><th>Pair</th><th>Venue</th><th>Fee</th><th class="num">Depth</th></tr></thead><tbody>');
+      p.top.slice(0, 15).forEach(function (r) {
+        H.push('<tr><td>' + esc(r.pair) + '</td><td>' + esc(r.venue) + '</td><td>' + esc(r.fee) + '</td><td class="num">' + usd(r.depthUsd) + '</td></tr>');
+      });
+      H.push('</tbody></table></div></div>');
+    }
+
+    H.push('<footer>Research tool, not trading advice. All figures are measured on-chain and reproducible from the repo. ' +
+      'No transaction has ever been broadcast.</footer>');
+
+    document.getElementById('app').innerHTML = H.join('');
+  }
+  window.render = render;
+
+  fetch('data/summary.json?t=' + Date.now())
+    .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(render)
+    .catch(function (e) {
+      document.getElementById('app').innerHTML =
+        '<div class="card"><h2>Data unavailable</h2><p class="note">Could not load <code>data/summary.json</code> (' + esc(e.message) + '). Run <code>python export_site_data.py</code> and commit the result.</p></div>';
+    });
+})();
+</script>
+</body>
+</html>

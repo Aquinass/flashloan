@@ -1,0 +1,30 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+test = "test"
+solc = "0.8.28"
+# Live Aave V3 implementation bytecode on Polygon contains Cancun opcodes
+# (MCOPY). Forking under an older spec makes the Pool revert with
+# `NotActivated` before our logic ever runs.
+evm_version = "cancun"
+optimizer = true
+optimizer_runs = 200
+# executeOperation holds enough locals to blow the stack under the legacy
+# codegen pipeline; via_ir handles the allocation.
+via_ir = true
+
+remappings = [
+    "@aave/core-v3/=lib/aave-v3-core/",
+    "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+    "forge-std/=lib/forge-std/src/",
+]
+
+# Fork test target. Override at runtime with:
+#   forge test --fork-url $FORK_RPC_URL
+[rpc_endpoints]
+polygon = "${FORK_RPC_URL}"
+mainnet = "${ETH_RPC_URL}"
+
+[fmt]
+line_length = 100

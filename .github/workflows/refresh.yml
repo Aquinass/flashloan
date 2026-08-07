@@ -1,0 +1,53 @@
+name: Refresh scan data
+
+# The dashboard is static; this keeps its snapshot current.
+# Requires a repo secret named RPC_URL (Settings -> Secrets and variables ->
+# Actions). Never commit the URL itself — it usually carries an API key.
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-scan
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Rebuild pool registry and rescan
+        env:
+          RPC_URL: ${{ secrets.RPC_URL }}
+        run: |
+          if [ -z "$RPC_URL" ]; then
+            echo "RPC_URL secret is not set — add it in repo Settings > Secrets."
+            exit 1
+          fi
+          python pool_registry.py
+          python export_site_data.py
+
+      - name: Commit refreshed snapshot
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/summary.json data/pools.json
+          if git diff --staged --quiet; then
+            echo "no change"
+          else
+            git commit -m "chore: refresh scan snapshot [skip ci]"
+            git push
+          fi
