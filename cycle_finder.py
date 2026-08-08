@@ -21,23 +21,81 @@ from collections import defaultdict
 
 from pool_registry import TOKENS, PX
 
-# Depth floor for a cycle: every hop must be able to absorb the trade. Using
-# the smallest hop is the honest bound, since one thin leg caps the whole route.
-MIN_HOP_DEPTH_USD = 20000
+# Depth floor for a cycle. This is a WEAK filter and deliberately low: measured
+# against live quotes, reserve depth turns out to be a poor predictor of what a
+# hop actually costs. DAI/USDC.e on sushiV2 carries $15.2k of depth and loses
+# 3.74% round-trip at $250; DAI/USDT on quickV3 has *less* depth ($11.0k) and
+# costs 0.0063% — a 590x difference at comparable depth. 27 pools above $20k
+# still lose >0.5%, so a depth threshold both admits traps and hides good pools.
+#
+# Depth is therefore used only to drop genuinely empty pools. The real filter is
+# MAX_HOP_COST_PCT below, applied to a measured quote.
+MIN_HOP_DEPTH_USD = 5000
+
+# Per-hop cost ceiling, measured not assumed: a hop may not cost more than this
+# fraction of the trade (fee + price impact at the intended size). Concentrated
+# V3 liquidity clears this comfortably; drained V2 pools do not, regardless of
+# how much sits in their reserves.
+MAX_HOP_COST_PCT = 0.15
 
 # Assets we are willing to borrow (Balancer vault must hold them).
 BORROWABLE = {"USDC.e", "USDC", "USDT", "DAI", "WETH", "WPOL", "WBTC"}
 
 
-def index_edges(edges):
+def index_edges(edges, costly_pools=None):
+    """
+    Group edges by source token, dropping empty pools and — when a cost profile
+    has been measured — pools whose real cost exceeds MAX_HOP_COST_PCT.
+    """
+    costly_pools = costly_pools or set()
     by_src = defaultdict(list)
     for e in edges:
-        if e["depthUsd"] >= MIN_HOP_DEPTH_USD:
-            by_src[e["src"]].append(e)
+        if e["depthUsd"] < MIN_HOP_DEPTH_USD:
+            continue
+        if e["pool"] in costly_pools:
+            continue
+        by_src[e["src"]].append(e)
     return by_src
 
 
-def find_cycles(edges, max_hops=3, top_n=40):
+def profile_hop_costs(w3, pools, size_usd=250, verbose=False):
+    """
+    Measure each pool's real round-trip cost and return the set of pool
+    addresses too expensive to route through.
+
+    Quotes out and back through the *same* pool so the USD price mark cancels;
+    what remains is exactly 2x fee + 2x price impact. That makes the result
+    independent of the static PX table, which is only accurate for stablecoins.
+    Halved to approximate a single hop.
+    """
+    import research as R
+    import pool_registry as PR
+
+    costly = set()
+    for p in pools:
+        a, b = p["tokenA"], p["tokenB"]
+        px = PR.PX.get(a, 0)
+        if px <= 0:
+            continue
+        amt = Decimal(size_usd) / Decimal(str(px))
+        try:
+            mid = R.quote(w3, p["venue"], a, b, amt, fee=p["fee"], tokens=PR.TOKENS)
+            back = R.quote(w3, p["venue"], b, a, mid, fee=p["fee"], tokens=PR.TOKENS) if mid else None
+        except Exception:
+            back = None
+        if not back:
+            costly.add(p["pool"])
+            continue
+        one_way = float((amt - back) / amt * 100) / 2
+        if one_way > MAX_HOP_COST_PCT:
+            costly.add(p["pool"])
+            if verbose:
+                print(f"  prune {a}/{b} {p['venue']}:{p['feeLabel']} "
+                      f"cost {one_way:.4f}% (depth ${p['depthUsd']:,.0f})")
+    return costly
+
+
+def find_cycles(edges, max_hops=3, top_n=40, costly_pools=None):
     """
     Enumerate profitable-at-mid cycles starting and ending at a borrowable asset.
 
@@ -45,7 +103,7 @@ def find_cycles(edges, max_hops=3, top_n=40):
     of post-fee edge multipliers minus 1 — the theoretical return ignoring
     price impact, which real depth will erode.
     """
-    by_src = index_edges(edges)
+    by_src = index_edges(edges, costly_pools)
     out = []
 
     for start in sorted(BORROWABLE):

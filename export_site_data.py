@@ -98,9 +98,15 @@ def collect_cycles(w3, pools):
     states = PS.read_states(w3, pools)
     edges = PS.build_edges(pools, states)
 
+    # Prune hops by measured cost, not by reserve depth. Depth is a poor proxy:
+    # a $15.2k sushiV2 pool loses 3.74% round-trip at $250 while a $11.0k
+    # quickV3 pool costs 0.0063%. Filtering on depth alone both admits traps
+    # and hides good routes.
+    costly = CF.profile_hop_costs(w3, pools, size_usd=CONFIRM_SIZE_USD)
+
     by = defaultdict(list)
     for e in edges:
-        if e["depthUsd"] >= CF.MIN_HOP_DEPTH_USD:
+        if e["depthUsd"] >= CF.MIN_HOP_DEPTH_USD and e["pool"] not in costly:
             by[e["src"]].append(e)
 
     found, n2, n3 = [], 0, 0
@@ -171,6 +177,8 @@ def collect_cycles(w3, pools):
         "confirmSizeUsd": CONFIRM_SIZE_USD,
         "statesDecoded": len(states),
         "poolsConsidered": len(pools),
+        "poolsPruned": len(costly),
+        "maxHopCostPct": CF.MAX_HOP_COST_PCT,
         "deepEdges": sum(len(v) for v in by.values()),
         "best": uniq[:20],
     }
