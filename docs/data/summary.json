@@ -1,37 +1,37 @@
 {
- "generatedAt": "2026-08-21T08:56:24.226891+00:00",
+ "generatedAt": "2026-08-21T09:51:44.451923+00:00",
  "chain": "Polygon",
  "hurdlePct": 0.0042,
  "pools": {
-  "block": 92398353,
+  "block": 92400561,
   "minDepthUsd": 5000,
   "total": 101,
-  "totalDepthUsd": 7955209.9457423305,
+  "totalDepthUsd": 7978363.314200738,
   "byVenue": [
    {
     "venue": "uniV3",
     "count": 47,
-    "depthUsd": 3809797.4110987457
+    "depthUsd": 3813066.290408411
    },
    {
     "venue": "quickV2",
     "count": 20,
-    "depthUsd": 2866687.233234446
+    "depthUsd": 2873773.8313314444
    },
    {
     "venue": "quickV3",
     "count": 18,
-    "depthUsd": 522135.3376958788
+    "depthUsd": 528462.3148687227
    },
    {
     "venue": "sushiV2",
     "count": 12,
-    "depthUsd": 487333.79542390275
+    "depthUsd": 488574.9722286567
    },
    {
     "venue": "sushiV3",
     "count": 4,
-    "depthUsd": 269256.1682893574
+    "depthUsd": 274485.90536350285
    }
   ],
   "top": [
@@ -39,28 +39,21 @@
     "pair": "USDC.e/WETH",
     "venue": "quickV2",
     "fee": "0.30%",
-    "depthUsd": 882004.8974903832,
+    "depthUsd": 886741.3888974271,
     "pool": "0x853Ee4b2A13f8a742d64C8F088bE7bA2131f670d"
    },
    {
     "pair": "USDT/WPOL",
     "venue": "uniV3",
     "fee": "0.05%",
-    "depthUsd": 389253.4260502313,
+    "depthUsd": 389533.1384818394,
     "pool": "0x9B08288C3Be4F62bbf8d1C20Ac9C5e6f9467d8B7"
-   },
-   {
-    "pair": "USDC.e/USDT",
-    "venue": "uniV3",
-    "fee": "0.01%",
-    "depthUsd": 366807.189143,
-    "pool": "0xDaC8A8E6DBf8c690ec6815e0fF03491B2770255D"
    },
    {
     "pair": "MAI/USDC.e",
     "venue": "quickV2",
     "fee": "0.30%",
-    "depthUsd": 320138.27449,
+    "depthUsd": 320101.328503,
     "pool": "0x160532D2536175d65C03B97b0630A9802c274daD"
    },
    {
@@ -71,80 +64,87 @@
     "pool": "0x2cF7252e74036d1Da831d11089D326296e64a728"
    },
    {
+    "pair": "USDC.e/USDT",
+    "venue": "uniV3",
+    "fee": "0.01%",
+    "depthUsd": 299339.146037,
+    "pool": "0xDaC8A8E6DBf8c690ec6815e0fF03491B2770255D"
+   },
+   {
     "pair": "USDC.e/WETH",
     "venue": "uniV3",
     "fee": "0.05%",
-    "depthUsd": 289656.139721,
+    "depthUsd": 286274.601178,
     "pool": "0x45dDa9cb7c25131DF268515131f647d726f50608"
    },
    {
     "pair": "WBTC/WETH",
     "venue": "uniV3",
     "fee": "0.05%",
-    "depthUsd": 246876.23646,
+    "depthUsd": 276688.80981,
     "pool": "0x50eaEDB835021E4A108B7290636d62E9765cc6d7"
    },
    {
     "pair": "USDC.e/WPOL",
     "venue": "quickV2",
     "fee": "0.30%",
-    "depthUsd": 240942.3210986639,
+    "depthUsd": 241232.98329468683,
     "pool": "0x6e7a5FAFcec6BB1e78bAE2A1F0B612012BF14827"
-   },
-   {
-    "pair": "USDT/WETH",
-    "venue": "uniV3",
-    "fee": "0.30%",
-    "depthUsd": 208715.67577,
-    "pool": "0x4CcD010148379ea531D6C587CfDd60180196F9b1"
    },
    {
     "pair": "USDC.e/WBTC",
     "venue": "uniV3",
     "fee": "0.05%",
-    "depthUsd": 193822.47171,
+    "depthUsd": 203677.70346,
     "pool": "0xeEF1A9507B3D505f0062f2be9453981255b503c8"
    },
    {
-    "pair": "LINK/WETH",
+    "pair": "USDT/WETH",
     "venue": "uniV3",
     "fee": "0.30%",
-    "depthUsd": 191083.0562839236,
-    "pool": "0x3e31AB7f37c048FC6574189135D108df80F0ea26"
+    "depthUsd": 197302.958176,
+    "pool": "0x4CcD010148379ea531D6C587CfDd60180196F9b1"
    },
    {
     "pair": "WETH/WPOL",
     "venue": "quickV2",
     "fee": "0.30%",
-    "depthUsd": 188126.58989292357,
+    "depthUsd": 188814.40963027862,
     "pool": "0xadbF1854e5883eB8aa7BAf50705338739e558E5b"
    },
    {
     "pair": "USDC/WETH",
     "venue": "uniV3",
     "fee": "0.05%",
-    "depthUsd": 181144.66363483606,
+    "depthUsd": 186613.72922714718,
     "pool": "0xA4D8c89f0c20efbe54cBa9e7e7a7E509056228D9"
+   },
+   {
+    "pair": "LINK/WETH",
+    "venue": "uniV3",
+    "fee": "0.30%",
+    "depthUsd": 186117.08559037893,
+    "pool": "0x3e31AB7f37c048FC6574189135D108df80F0ea26"
    },
    {
     "pair": "WBTC/WETH",
     "venue": "quickV2",
     "fee": "0.30%",
-    "depthUsd": 178251.37964232374,
+    "depthUsd": 178789.99122645994,
     "pool": "0xdC9232E2Df177d7a12FdFf6EcBAb114E2231198D"
    },
    {
-    "pair": "USDC/USDT",
+    "pair": "USDC/USDC.e",
     "venue": "uniV3",
     "fee": "0.01%",
-    "depthUsd": 165634.423918,
-    "pool": "0x31083a78E11B18e450fd139F9ABEa98CD53181B7"
+    "depthUsd": 152463.186422,
+    "pool": "0xD36ec33c8bed5a9F7B6630855f1533455b98a418"
    },
    {
     "pair": "DAI/USDT",
     "venue": "quickV2",
     "fee": "0.30%",
-    "depthUsd": 152450.872449,
+    "depthUsd": 152426.970165,
     "pool": "0x59153f27eeFE07E5eCE4f9304EBBa1DA6F53CA88"
    },
    {
@@ -155,131 +155,155 @@
     "pool": "0xf04adBF75cDFc5eD26eeA4bbbb991DB002036Bdd"
    },
    {
-    "pair": "USDC/USDC.e",
+    "pair": "USDT/WETH",
     "venue": "uniV3",
-    "fee": "0.01%",
-    "depthUsd": 143272.970504,
-    "pool": "0xD36ec33c8bed5a9F7B6630855f1533455b98a418"
+    "fee": "0.05%",
+    "depthUsd": 147141.83548797472,
+    "pool": "0xBB98B3D2b18aeF63a3178023A920971cf5F29bE4"
    },
    {
-    "pair": "LINK/USDC",
+    "pair": "USDC/USDT",
     "venue": "uniV3",
-    "fee": "0.30%",
-    "depthUsd": 126713.270179,
-    "pool": "0x79E4240E33C121402dfc9009dE266356c91f241d"
+    "fee": "0.01%",
+    "depthUsd": 139688.487751,
+    "pool": "0x31083a78E11B18e450fd139F9ABEa98CD53181B7"
    },
    {
     "pair": "WBTC/WETH",
     "venue": "sushiV2",
     "fee": "0.30%",
-    "depthUsd": 126657.63468612645,
+    "depthUsd": 127002.6094790935,
     "pool": "0xE62Ec2e799305E0D367b0Cc3ee2CdA135bF89816"
    },
    {
-    "pair": "USDT/WETH",
+    "pair": "LINK/USDC",
     "venue": "uniV3",
-    "fee": "0.05%",
-    "depthUsd": 118638.35541199647,
-    "pool": "0xBB98B3D2b18aeF63a3178023A920971cf5F29bE4"
+    "fee": "0.30%",
+    "depthUsd": 122292.201063,
+    "pool": "0x79E4240E33C121402dfc9009dE266356c91f241d"
+   },
+   {
+    "pair": "DAI/USDT",
+    "venue": "uniV3",
+    "fee": "0.01%",
+    "depthUsd": 114827.662415,
+    "pool": "0x254aa3A898071D6A2dA0DB11dA73b02B4646078F"
    },
    {
     "pair": "AAVE/WETH",
     "venue": "uniV3",
     "fee": "0.30%",
-    "depthUsd": 106045.16958419453,
+    "depthUsd": 107036.2055936743,
     "pool": "0x2aCeda63B5e958c45bd27d916ba701BC1DC08F7a"
    },
    {
     "pair": "LINK/USDC.e",
     "venue": "uniV3",
     "fee": "0.30%",
-    "depthUsd": 104065.969425,
+    "depthUsd": 100959.700725,
     "pool": "0x94Ab9E4553fFb839431E37CC79ba8905f45BfBeA"
-   },
-   {
-    "pair": "DAI/USDT",
-    "venue": "uniV3",
-    "fee": "0.01%",
-    "depthUsd": 96088.036759,
-    "pool": "0x254aa3A898071D6A2dA0DB11dA73b02B4646078F"
    },
    {
     "pair": "USDC.e/WETH",
     "venue": "sushiV3",
     "fee": "0.30%",
-    "depthUsd": 94569.07379902394,
+    "depthUsd": 97671.41659042056,
     "pool": "0x1b0585Fc8195fc04a46A365E670024Dfb63a960C"
    }
   ]
  },
  "cycles": {
-  "enumerated": 596,
-  "twoHop": 80,
-  "threeHop": 516,
-  "profitableAtMid": 0,
+  "enumerated": 678,
+  "twoHop": 84,
+  "threeHop": 594,
+  "profitableAtMid": 2,
   "profitable": 0,
   "confirmSizeUsd": 1000,
   "statesDecoded": 101,
   "poolsConsidered": 101,
-  "poolsPruned": 77,
+  "poolsPruned": 74,
   "maxHopCostPct": 0.15,
-  "deepEdges": 48,
+  "deepEdges": 54,
   "best": [
+   {
+    "route": "USDC.e \u2192 WBTC \u2192 USDC.e",
+    "hops": 2,
+    "grossPct": 0.048087205262271726,
+    "capUsd": 16584.510415,
+    "venues": [
+     "uniV3:0.05%",
+     "quickV3:dyn"
+    ],
+    "exactPct": -0.1988348,
+    "confirmed": false
+   },
+   {
+    "route": "WBTC \u2192 USDC.e \u2192 WBTC",
+    "hops": 2,
+    "grossPct": 0.048087205262271726,
+    "capUsd": 16584.510415,
+    "venues": [
+     "quickV3:dyn",
+     "uniV3:0.05%"
+    ],
+    "exactPct": -0.241201,
+    "confirmed": false
+   },
    {
     "route": "USDC.e \u2192 USDT \u2192 USDC.e",
     "hops": 2,
-    "grossPct": -0.011115021663948562,
-    "capUsd": 37284.871512,
-    "venues": [
-     "sushiV3:0.01%",
-     "quickV3:dyn"
-    ]
-   },
-   {
-    "route": "USDT \u2192 USDC.e \u2192 USDT",
-    "hops": 2,
-    "grossPct": -0.011115021663948562,
-    "capUsd": 37284.871512,
+    "grossPct": -0.01601397117193649,
+    "capUsd": 37151.272316,
     "venues": [
      "quickV3:dyn",
      "sushiV3:0.01%"
     ]
    },
    {
-    "route": "USDC.e \u2192 USDT \u2192 USDC.e",
+    "route": "USDT \u2192 USDC.e \u2192 USDT",
     "hops": 2,
-    "grossPct": -0.01355513225166262,
-    "capUsd": 37284.871512,
+    "grossPct": -0.01601397117193649,
+    "capUsd": 37151.272316,
     "venues": [
-     "uniV3:0.01%",
+     "sushiV3:0.01%",
      "quickV3:dyn"
     ]
    },
    {
-    "route": "USDT \u2192 USDC.e \u2192 USDT",
+    "route": "USDC.e \u2192 USDT \u2192 USDC.e",
     "hops": 2,
-    "grossPct": -0.01355513225166262,
-    "capUsd": 37284.871512,
+    "grossPct": -0.016880465693809483,
+    "capUsd": 37151.272316,
     "venues": [
      "quickV3:dyn",
      "uniV3:0.01%"
     ]
    },
    {
-    "route": "USDC \u2192 USDC.e \u2192 USDC",
+    "route": "USDT \u2192 USDC.e \u2192 USDT",
     "hops": 2,
-    "grossPct": -0.013599707318990085,
-    "capUsd": 15692.513143,
+    "grossPct": -0.016880465693809483,
+    "capUsd": 37151.272316,
     "venues": [
      "uniV3:0.01%",
      "quickV3:dyn"
     ]
    },
    {
-    "route": "USDC.e \u2192 USDC \u2192 USDC.e",
+    "route": "DAI \u2192 USDC.e \u2192 DAI",
     "hops": 2,
-    "grossPct": -0.013599707318990085,
-    "capUsd": 15692.513143,
+    "grossPct": -0.0169865025830708,
+    "capUsd": 19212.79460051157,
+    "venues": [
+     "uniV3:0.01%",
+     "quickV3:dyn"
+    ]
+   },
+   {
+    "route": "USDC.e \u2192 DAI \u2192 USDC.e",
+    "hops": 2,
+    "grossPct": -0.0169865025830708,
+    "capUsd": 19212.79460051157,
     "venues": [
      "quickV3:dyn",
      "uniV3:0.01%"
@@ -288,18 +312,58 @@
    {
     "route": "USDC \u2192 USDT \u2192 USDC",
     "hops": 2,
-    "grossPct": -0.015261280479509464,
-    "capUsd": 67598.524693,
+    "grossPct": -0.017072653487744362,
+    "capUsd": 67585.891342,
+    "venues": [
+     "quickV3:dyn",
+     "uniV3:0.01%"
+    ]
+   },
+   {
+    "route": "USDT \u2192 USDC \u2192 USDT",
+    "hops": 2,
+    "grossPct": -0.017072653487744362,
+    "capUsd": 67585.891342,
     "venues": [
      "uniV3:0.01%",
      "quickV3:dyn"
     ]
    },
    {
-    "route": "USDT \u2192 USDC \u2192 USDT",
+    "route": "DAI \u2192 USDC.e \u2192 DAI",
     "hops": 2,
-    "grossPct": -0.015261280479509464,
-    "capUsd": 67598.524693,
+    "grossPct": -0.017440339245050493,
+    "capUsd": 19212.79460051157,
+    "venues": [
+     "sushiV3:0.01%",
+     "quickV3:dyn"
+    ]
+   },
+   {
+    "route": "USDC.e \u2192 DAI \u2192 USDC.e",
+    "hops": 2,
+    "grossPct": -0.017440339245050493,
+    "capUsd": 19212.79460051157,
+    "venues": [
+     "quickV3:dyn",
+     "sushiV3:0.01%"
+    ]
+   },
+   {
+    "route": "USDC \u2192 USDC.e \u2192 USDC",
+    "hops": 2,
+    "grossPct": -0.017556160642069385,
+    "capUsd": 15762.79219,
+    "venues": [
+     "uniV3:0.01%",
+     "quickV3:dyn"
+    ]
+   },
+   {
+    "route": "USDC.e \u2192 USDC \u2192 USDC.e",
+    "hops": 2,
+    "grossPct": -0.017556160642069385,
+    "capUsd": 15762.79219,
     "venues": [
      "quickV3:dyn",
      "uniV3:0.01%"
@@ -308,8 +372,8 @@
    {
     "route": "DAI \u2192 USDT \u2192 DAI",
     "hops": 2,
-    "grossPct": -0.016437508806753248,
-    "capUsd": 12114.511419171662,
+    "grossPct": -0.01900379065435982,
+    "capUsd": 12670.343899388401,
     "venues": [
      "uniV3:0.01%",
      "quickV3:dyn"
@@ -318,8 +382,8 @@
    {
     "route": "USDT \u2192 DAI \u2192 USDT",
     "hops": 2,
-    "grossPct": -0.016437508806753248,
-    "capUsd": 12114.511419171662,
+    "grossPct": -0.01900379065435982,
+    "capUsd": 12670.343899388401,
     "venues": [
      "quickV3:dyn",
      "uniV3:0.01%"
@@ -328,91 +392,18 @@
    {
     "route": "USDC.e \u2192 USDT \u2192 USDC.e",
     "hops": 2,
-    "grossPct": -0.01755904667110177,
-    "capUsd": 71266.568792,
+    "grossPct": -0.01913253250461813,
+    "capUsd": 71998.38376,
     "venues": [
-     "sushiV3:0.01%",
-     "uniV3:0.01%"
+     "uniV3:0.01%",
+     "sushiV3:0.01%"
     ]
    },
    {
     "route": "USDT \u2192 USDC.e \u2192 USDT",
     "hops": 2,
-    "grossPct": -0.01755904667110177,
-    "capUsd": 71266.568792,
-    "venues": [
-     "uniV3:0.01%",
-     "sushiV3:0.01%"
-    ]
-   },
-   {
-    "route": "USDC \u2192 USDC.e \u2192 USDT \u2192 USDC",
-    "hops": 3,
-    "grossPct": -0.018296588005520656,
-    "capUsd": 67598.524693,
-    "venues": [
-     "uniV3:0.01%",
-     "sushiV3:0.01%",
-     "quickV3:dyn"
-    ]
-   },
-   {
-    "route": "USDC.e \u2192 USDT \u2192 USDC \u2192 USDC.e",
-    "hops": 3,
-    "grossPct": -0.018296588005520656,
-    "capUsd": 67598.524693,
-    "venues": [
-     "sushiV3:0.01%",
-     "quickV3:dyn",
-     "uniV3:0.01%"
-    ]
-   },
-   {
-    "route": "USDT \u2192 USDC \u2192 USDC.e \u2192 USDT",
-    "hops": 3,
-    "grossPct": -0.018296588005520656,
-    "capUsd": 67598.524693,
-    "venues": [
-     "quickV3:dyn",
-     "uniV3:0.01%",
-     "sushiV3:0.01%"
-    ]
-   },
-   {
-    "route": "DAI \u2192 USDC.e \u2192 DAI",
-    "hops": 2,
-    "grossPct": -0.01878165816706136,
-    "capUsd": 18960.244619955836,
-    "venues": [
-     "quickV3:dyn",
-     "sushiV3:0.01%"
-    ]
-   },
-   {
-    "route": "USDC.e \u2192 DAI \u2192 USDC.e",
-    "hops": 2,
-    "grossPct": -0.01878165816706136,
-    "capUsd": 18960.244619955836,
-    "venues": [
-     "sushiV3:0.01%",
-     "quickV3:dyn"
-    ]
-   },
-   {
-    "route": "DAI \u2192 USDC.e \u2192 DAI",
-    "hops": 2,
-    "grossPct": -0.019177353413672407,
-    "capUsd": 81286.425262,
-    "venues": [
-     "uniV3:0.01%",
-     "sushiV3:0.01%"
-    ]
-   },
-   {
-    "route": "USDC.e \u2192 DAI \u2192 USDC.e",
-    "hops": 2,
-    "grossPct": -0.019177353413672407,
-    "capUsd": 81286.425262,
+    "grossPct": -0.01913253250461813,
+    "capUsd": 71998.38376,
     "venues": [
      "sushiV3:0.01%",
      "uniV3:0.01%"
@@ -421,10 +412,20 @@
    {
     "route": "DAI \u2192 USDC.e \u2192 DAI",
     "hops": 2,
-    "grossPct": -0.019603308005229057,
-    "capUsd": 18960.244619955836,
+    "grossPct": -0.01954517495218642,
+    "capUsd": 81327.861822,
     "venues": [
-     "quickV3:dyn",
+     "uniV3:0.01%",
+     "sushiV3:0.01%"
+    ]
+   },
+   {
+    "route": "USDC.e \u2192 DAI \u2192 USDC.e",
+    "hops": 2,
+    "grossPct": -0.01954517495218642,
+    "capUsd": 81327.861822,
+    "venues": [
+     "sushiV3:0.01%",
      "uniV3:0.01%"
     ]
    }
