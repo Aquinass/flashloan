@@ -1,5 +1,5 @@
 {
- "block": 94048045,
+ "block": 94061327,
  "minDepthUsd": 5000,
  "pools": [
   {
@@ -9,9 +9,9 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0x853Ee4b2A13f8a742d64C8F088bE7bA2131f670d",
-   "amtA": 1164394.278836,
-   "amtB": 445.65220742901636,
-   "depthUsd": 852532.6728117083
+   "amtA": 1166992.232383,
+   "amtB": 444.6693381101777,
+   "depthUsd": 850652.44380477
   },
   {
    "tokenA": "USDT",
@@ -20,64 +20,9 @@
    "feeLabel": "0.05%",
    "fee": 500,
    "pool": "0x9B08288C3Be4F62bbf8d1C20Ac9C5e6f9467d8B7",
-   "amtA": 654510.028412,
-   "amtB": 6416811.28976175,
-   "depthUsd": 481260.84673213126
-  },
-  {
-   "tokenA": "USDC",
-   "tokenB": "USDT",
-   "venue": "uniV3",
-   "feeLabel": "0.01%",
-   "fee": 100,
-   "pool": "0x31083a78E11B18e450fd139F9ABEa98CD53181B7",
-   "amtA": 749980.404881,
-   "amtB": 312975.755825,
-   "depthUsd": 312975.755825
-  },
-  {
-   "tokenA": "MAI",
-   "tokenB": "USDC.e",
-   "venue": "quickV2",
-   "feeLabel": "0.30%",
-   "fee": 3000,
-   "pool": "0x160532D2536175d65C03B97b0630A9802c274daD",
-   "amtA": 329164.34001215035,
-   "amtB": 312726.230476,
-   "depthUsd": 312726.230476
-  },
-  {
-   "tokenA": "USDC.e",
-   "tokenB": "USDT",
-   "venue": "quickV2",
-   "feeLabel": "0.30%",
-   "fee": 3000,
-   "pool": "0x2cF7252e74036d1Da831d11089D326296e64a728",
-   "amtA": 310656.127989,
-   "amtB": 311486.72475,
-   "depthUsd": 310656.127989
-  },
-  {
-   "tokenA": "WBTC",
-   "tokenB": "WETH",
-   "venue": "uniV3",
-   "feeLabel": "0.05%",
-   "fee": 500,
-   "pool": "0x50eaEDB835021E4A108B7290636d62E9765cc6d7",
-   "amtA": 4.80787544,
-   "amtB": 387.8884138463153,
-   "depthUsd": 302896.15272
-  },
-  {
-   "tokenA": "USDC.e",
-   "tokenB": "WETH",
-   "venue": "uniV3",
-   "feeLabel": "0.05%",
-   "fee": 500,
-   "pool": "0x45dDa9cb7c25131DF268515131f647d726f50608",
-   "amtA": 305333.116079,
-   "amtB": 155.67384447018787,
-   "depthUsd": 297804.0644714694
+   "amtA": 600628.032689,
+   "amtB": 6918637.596122012,
+   "depthUsd": 518897.8197091508
   },
   {
    "tokenA": "USDC.e",
@@ -86,9 +31,64 @@
    "feeLabel": "0.01%",
    "fee": 100,
    "pool": "0xDaC8A8E6DBf8c690ec6815e0fF03491B2770255D",
-   "amtA": 937410.474149,
-   "amtB": 269413.707164,
-   "depthUsd": 269413.707164
+   "amtA": 716417.634454,
+   "amtB": 491086.388952,
+   "depthUsd": 491086.388952
+  },
+  {
+   "tokenA": "USDC",
+   "tokenB": "USDT",
+   "venue": "uniV3",
+   "feeLabel": "0.01%",
+   "fee": 100,
+   "pool": "0x31083a78E11B18e450fd139F9ABEa98CD53181B7",
+   "amtA": 660612.045896,
+   "amtB": 355763.184143,
+   "depthUsd": 355763.184143
+  },
+  {
+   "tokenA": "WBTC",
+   "tokenB": "WETH",
+   "venue": "uniV3",
+   "feeLabel": "0.05%",
+   "fee": 500,
+   "pool": "0x50eaEDB835021E4A108B7290636d62E9765cc6d7",
+   "amtA": 4.98067592,
+   "amtB": 382.6393589593674,
+   "depthUsd": 313782.58296
+  },
+  {
+   "tokenA": "MAI",
+   "tokenB": "USDC.e",
+   "venue": "quickV2",
+   "feeLabel": "0.30%",
+   "fee": 3000,
+   "pool": "0x160532D2536175d65C03B97b0630A9802c274daD",
+   "amtA": 329147.8637081606,
+   "amtB": 312741.936901,
+   "depthUsd": 312741.936901
+  },
+  {
+   "tokenA": "USDC.e",
+   "tokenB": "USDT",
+   "venue": "quickV2",
+   "feeLabel": "0.30%",
+   "fee": 3000,
+   "pool": "0x2cF7252e74036d1Da831d11089D326296e64a728",
+   "amtA": 310610.040625,
+   "amtB": 311555.242978,
+   "depthUsd": 310610.040625
+  },
+  {
+   "tokenA": "USDC.e",
+   "tokenB": "WETH",
+   "venue": "uniV3",
+   "feeLabel": "0.05%",
+   "fee": 500,
+   "pool": "0x45dDa9cb7c25131DF268515131f647d726f50608",
+   "amtA": 310160.759593,
+   "amtB": 154.9166774778765,
+   "depthUsd": 296355.60401517776
   },
   {
    "tokenA": "USDC.e",
@@ -97,9 +97,9 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0x6e7a5FAFcec6BB1e78bAE2A1F0B612012BF14827",
-   "amtA": 312565.2097,
-   "amtB": 2978512.575590992,
-   "depthUsd": 223388.4431693244
+   "amtA": 311499.227191,
+   "amtB": 2989865.067742864,
+   "depthUsd": 224239.8800807148
   },
   {
    "tokenA": "USDC.e",
@@ -108,9 +108,9 @@
    "feeLabel": "0.05%",
    "fee": 500,
    "pool": "0xeEF1A9507B3D505f0062f2be9453981255b503c8",
-   "amtA": 383348.307488,
-   "amtB": 3.47955228,
-   "depthUsd": 219211.79364
+   "amtA": 383687.564978,
+   "amtB": 3.47982945,
+   "depthUsd": 219229.25535
   },
   {
    "tokenA": "AAVE",
@@ -119,9 +119,9 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0x2aCeda63B5e958c45bd27d916ba701BC1DC08F7a",
-   "amtA": 1809.7441114888766,
-   "amtB": 102.5036736625298,
-   "depthUsd": 196089.5277164195
+   "amtA": 1702.2892620454859,
+   "amtB": 108.59781379881252,
+   "depthUsd": 207747.61779712836
   },
   {
    "tokenA": "WETH",
@@ -130,9 +130,9 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0xadbF1854e5883eB8aa7BAf50705338739e558E5b",
-   "amtA": 103.52501412470357,
-   "amtB": 2579586.2830623086,
-   "depthUsd": 193468.97122967313
+   "amtA": 102.94156098443881,
+   "amtB": 2594669.872804337,
+   "depthUsd": 194600.24046032527
   },
   {
    "tokenA": "USDT",
@@ -141,9 +141,9 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0x4CcD010148379ea531D6C587CfDd60180196F9b1",
-   "amtA": 180761.31328,
-   "amtB": 167.68266164762508,
-   "depthUsd": 180761.31328
+   "amtA": 182744.208523,
+   "amtB": 166.75470713397831,
+   "depthUsd": 182744.208523
   },
   {
    "tokenA": "WBTC",
@@ -152,9 +152,9 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0xdC9232E2Df177d7a12FdFf6EcBAb114E2231198D",
-   "amtA": 2.94392714,
-   "amtB": 90.97662782396911,
-   "depthUsd": 174038.2890272529
+   "amtA": 2.94415799,
+   "amtB": 90.97057143892667,
+   "depthUsd": 174026.70316266673
   },
   {
    "tokenA": "LINK",
@@ -163,20 +163,9 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0x3e31AB7f37c048FC6574189135D108df80F0ea26",
-   "amtA": 23234.858376768618,
-   "amtB": 87.59112096822805,
-   "depthUsd": 167561.81441222026
-  },
-  {
-   "tokenA": "USDT",
-   "tokenB": "WETH",
-   "venue": "uniV3",
-   "feeLabel": "0.05%",
-   "fee": 500,
-   "pool": "0xBB98B3D2b18aeF63a3178023A920971cf5F29bE4",
-   "amtA": 342122.212233,
-   "amtB": 86.78776162491117,
-   "depthUsd": 166024.98798845508
+   "amtA": 22804.653786595893,
+   "amtB": 89.6478233437671,
+   "depthUsd": 171496.28605662647
   },
   {
    "tokenA": "USDC",
@@ -185,9 +174,20 @@
    "feeLabel": "0.05%",
    "fee": 500,
    "pool": "0xA4D8c89f0c20efbe54cBa9e7e7a7E509056228D9",
-   "amtA": 232000.167918,
-   "amtB": 82.83853367886432,
-   "depthUsd": 158470.11492766746
+   "amtA": 235110.39471,
+   "amtB": 81.46042045389748,
+   "depthUsd": 155833.7843283059
+  },
+  {
+   "tokenA": "USDT",
+   "tokenB": "WETH",
+   "venue": "uniV3",
+   "feeLabel": "0.05%",
+   "fee": 500,
+   "pool": "0xBB98B3D2b18aeF63a3178023A920971cf5F29bE4",
+   "amtA": 359040.615019,
+   "amtB": 80.08845957593579,
+   "depthUsd": 153209.22316876517
   },
   {
    "tokenA": "DAI",
@@ -196,9 +196,9 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0xf04adBF75cDFc5eD26eeA4bbbb991DB002036Bdd",
-   "amtA": 150967.39266318583,
-   "amtB": 150824.801346,
-   "depthUsd": 150824.801346
+   "amtA": 150999.3926635126,
+   "amtB": 150792.934215,
+   "depthUsd": 150792.934215
   },
   {
    "tokenA": "DAI",
@@ -207,9 +207,9 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0x59153f27eeFE07E5eCE4f9304EBBa1DA6F53CA88",
-   "amtA": 149165.01379547053,
-   "amtB": 148799.522994,
-   "depthUsd": 148799.522994
+   "amtA": 149176.5566492024,
+   "amtB": 148795.582042,
+   "depthUsd": 148795.582042
   },
   {
    "tokenA": "LINK",
@@ -218,20 +218,9 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0x79E4240E33C121402dfc9009dE266356c91f241d",
-   "amtA": 14332.911384189738,
-   "amtB": 142056.076721,
-   "depthUsd": 142056.076721
-  },
-  {
-   "tokenA": "WBTC",
-   "tokenB": "WETH",
-   "venue": "sushiV2",
-   "feeLabel": "0.30%",
-   "fee": 3000,
-   "pool": "0xE62Ec2e799305E0D367b0Cc3ee2CdA135bF89816",
-   "amtA": 2.09847472,
-   "amtB": 64.84377999550988,
-   "depthUsd": 124046.1511314104
+   "amtA": 13967.436975361776,
+   "amtB": 146636.573397,
+   "depthUsd": 146636.573397
   },
   {
    "tokenA": "USDC",
@@ -240,20 +229,20 @@
    "feeLabel": "0.01%",
    "fee": 100,
    "pool": "0xD36ec33c8bed5a9F7B6630855f1533455b98a418",
-   "amtA": 175220.858992,
-   "amtB": 118294.514611,
-   "depthUsd": 118294.514611
+   "amtA": 161695.672378,
+   "amtB": 131822.420064,
+   "depthUsd": 131822.420064
   },
   {
-   "tokenA": "USDC",
-   "tokenB": "WBTC",
-   "venue": "uniV3",
+   "tokenA": "WBTC",
+   "tokenB": "WETH",
+   "venue": "sushiV2",
    "feeLabel": "0.30%",
    "fee": 3000,
-   "pool": "0xe6Ba22265AeFe9dC392F544437ACCe2AEdF8ef36",
-   "amtA": 197952.452882,
-   "amtB": 1.7186762,
-   "depthUsd": 108276.6006
+   "pool": "0xE62Ec2e799305E0D367b0Cc3ee2CdA135bF89816",
+   "amtA": 2.09855037,
+   "amtB": 64.8422275597408,
+   "depthUsd": 124043.18132178416
   },
   {
    "tokenA": "AAVE",
@@ -262,9 +251,20 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0xc42BF5CD16D9eb1E892b66bB32A3892Dcb7bb75C",
-   "amtA": 827.7085490476808,
-   "amtB": 104685.436948,
-   "depthUsd": 104685.436948
+   "amtA": 794.1999089113482,
+   "amtB": 110349.872648,
+   "depthUsd": 110349.872648
+  },
+  {
+   "tokenA": "USDC",
+   "tokenB": "WBTC",
+   "venue": "uniV3",
+   "feeLabel": "0.30%",
+   "fee": 3000,
+   "pool": "0xe6Ba22265AeFe9dC392F544437ACCe2AEdF8ef36",
+   "amtA": 199212.058115,
+   "amtB": 1.7062856,
+   "depthUsd": 107495.9928
   },
   {
    "tokenA": "DAI",
@@ -273,31 +273,9 @@
    "feeLabel": "dyn",
    "fee": 0,
    "pool": "0xBC8f3da0bd42E1F2509cd8671Ce7c7E5f7fd39c8",
-   "amtA": 94785.73639268466,
-   "amtB": 133281.28613,
-   "depthUsd": 94785.73639268466
-  },
-  {
-   "tokenA": "DAI",
-   "tokenB": "USDT",
-   "venue": "uniV3",
-   "feeLabel": "0.01%",
-   "fee": 100,
-   "pool": "0x254aa3A898071D6A2dA0DB11dA73b02B4646078F",
-   "amtA": 93834.09097610379,
-   "amtB": 94250.987644,
-   "depthUsd": 93834.09097610379
-  },
-  {
-   "tokenA": "USDC",
-   "tokenB": "WPOL",
-   "venue": "uniV3",
-   "feeLabel": "0.05%",
-   "fee": 500,
-   "pool": "0xB6e57ed85c4c9dbfEF2a68711e9d6f36c56e0FcB",
-   "amtA": 90958.097008,
-   "amtB": 1553038.3047973993,
-   "depthUsd": 90958.097008
+   "amtA": 92958.84497271168,
+   "amtB": 135113.267064,
+   "depthUsd": 92958.84497271168
   },
   {
    "tokenA": "LINK",
@@ -306,9 +284,9 @@
    "feeLabel": "0.05%",
    "fee": 500,
    "pool": "0x3dC10D7Bfb94eeB009203E84a653E5764F71771d",
-   "amtA": 12977.840176009415,
-   "amtB": 44.953665079111744,
-   "depthUsd": 85996.36129634076
+   "amtA": 12736.144846902936,
+   "amtB": 46.14746757172996,
+   "depthUsd": 88280.10546471943
   },
   {
    "tokenA": "DAI",
@@ -317,9 +295,9 @@
    "feeLabel": "0.01%",
    "fee": 100,
    "pool": "0x4646E8A5e1d14E2DA01577822D6346c7883C6890",
-   "amtA": 83737.15060079425,
-   "amtB": 91958.336968,
-   "depthUsd": 83737.15060079425
+   "amtA": 88602.97428538023,
+   "amtB": 87103.430511,
+   "depthUsd": 87103.430511
   },
   {
    "tokenA": "LINK",
@@ -328,9 +306,31 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0x94Ab9E4553fFb839431E37CC79ba8905f45BfBeA",
-   "amtA": 13167.710742285473,
-   "amtB": 79758.732732,
-   "depthUsd": 79758.732732
+   "amtA": 12928.478268518833,
+   "amtB": 82506.798691,
+   "depthUsd": 82506.798691
+  },
+  {
+   "tokenA": "USDC",
+   "tokenB": "WPOL",
+   "venue": "uniV3",
+   "feeLabel": "0.05%",
+   "fee": 500,
+   "pool": "0xB6e57ed85c4c9dbfEF2a68711e9d6f36c56e0FcB",
+   "amtA": 82493.565596,
+   "amtB": 1578335.6530743057,
+   "depthUsd": 82493.565596
+  },
+  {
+   "tokenA": "DAI",
+   "tokenB": "USDT",
+   "venue": "uniV3",
+   "feeLabel": "0.01%",
+   "fee": 100,
+   "pool": "0x254aa3A898071D6A2dA0DB11dA73b02B4646078F",
+   "amtA": 79576.56224042313,
+   "amtB": 108805.735239,
+   "depthUsd": 79576.56224042313
   },
   {
    "tokenA": "USDC.e",
@@ -339,9 +339,9 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0x1b0585Fc8195fc04a46A365E670024Dfb63a960C",
-   "amtA": 283322.714641,
-   "amtB": 38.77775968165711,
-   "depthUsd": 74181.85427101004
+   "amtA": 285046.841411,
+   "amtB": 38.1248366982105,
+   "depthUsd": 72932.81260367668
   },
   {
    "tokenA": "USDC.e",
@@ -350,31 +350,9 @@
    "feeLabel": "0.01%",
    "fee": 100,
    "pool": "0x8CFaab34f5159abf9C35587AC40d09a05dC94765",
-   "amtA": 72681.762326,
-   "amtB": 72761.522343,
-   "depthUsd": 72681.762326
-  },
-  {
-   "tokenA": "SAND",
-   "tokenB": "WPOL",
-   "venue": "quickV2",
-   "feeLabel": "0.30%",
-   "fee": 3000,
-   "pool": "0x369582d2010B6eD950B571F4101e3bB9b554876F",
-   "amtA": 2349100.981365144,
-   "amtB": 877644.4955511151,
-   "depthUsd": 65823.33716633363
-  },
-  {
-   "tokenA": "USDC.e",
-   "tokenB": "WBTC",
-   "venue": "quickV2",
-   "feeLabel": "0.30%",
-   "fee": 3000,
-   "pool": "0xF6a637525402643B0654a54bEAd2Cb9A83C8B498",
-   "amtA": 84411.665199,
-   "amtB": 1.04203047,
-   "depthUsd": 65647.91961
+   "amtA": 72218.08112,
+   "amtB": 73225.448373,
+   "depthUsd": 72218.08112
   },
   {
    "tokenA": "USDC",
@@ -383,9 +361,31 @@
    "feeLabel": "dyn",
    "fee": 0,
    "pool": "0x0e3Eb2C75Bd7dD0e12249d96b1321d9570764D77",
-   "amtA": 93719.406389,
-   "amtB": 64762.890989,
-   "depthUsd": 64762.890989
+   "amtA": 92281.336646,
+   "amtB": 66202.255897,
+   "depthUsd": 66202.255897
+  },
+  {
+   "tokenA": "SAND",
+   "tokenB": "WPOL",
+   "venue": "quickV2",
+   "feeLabel": "0.30%",
+   "fee": 3000,
+   "pool": "0x369582d2010B6eD950B571F4101e3bB9b554876F",
+   "amtA": 2349354.2331590024,
+   "amtB": 877805.602549559,
+   "depthUsd": 65835.42019121692
+  },
+  {
+   "tokenA": "USDC.e",
+   "tokenB": "WBTC",
+   "venue": "quickV2",
+   "feeLabel": "0.30%",
+   "fee": 3000,
+   "pool": "0xF6a637525402643B0654a54bEAd2Cb9A83C8B498",
+   "amtA": 84473.543104,
+   "amtB": 1.04127982,
+   "depthUsd": 65600.62866
   },
   {
    "tokenA": "AAVE",
@@ -394,9 +394,9 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0x2813D43463C374a680f235c428FB1D7f08dE0B69",
-   "amtA": 599.4703585360437,
-   "amtB": 32.164329322122015,
-   "depthUsd": 61530.36199321941
+   "amtA": 594.1979308093294,
+   "amtB": 32.45502527577003,
+   "depthUsd": 62086.463352548075
   },
   {
    "tokenA": "USDT",
@@ -405,9 +405,9 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0xF6422B997c7F54D1c6a6e103bcb1499EeA0a7046",
-   "amtA": 80538.456121,
-   "amtB": 30.822800679344837,
-   "depthUsd": 58964.01769958668
+   "amtA": 80723.225511,
+   "amtB": 30.752831180929498,
+   "depthUsd": 58830.166049118125
   },
   {
    "tokenA": "DAI",
@@ -416,9 +416,9 @@
    "feeLabel": "0.01%",
    "fee": 100,
    "pool": "0x5645dCB64c059aa11212707fbf4E7F984440a8Cf",
-   "amtA": 58476.69333832208,
-   "amtB": 120288.114552,
-   "depthUsd": 58476.69333832208
+   "amtA": 55530.83175017562,
+   "amtB": 124257.235708,
+   "depthUsd": 55530.83175017562
   },
   {
    "tokenA": "WBTC",
@@ -427,20 +427,9 @@
    "feeLabel": "dyn",
    "fee": 0,
    "pool": "0xAC4494e30a85369e332BDB5230d6d694d4259DbC",
-   "amtA": 1.36007789,
-   "amtB": 30.0623954741711,
-   "depthUsd": 57509.362542089315
-  },
-  {
-   "tokenA": "AAVE",
-   "tokenB": "USDT",
-   "venue": "uniV3",
-   "feeLabel": "0.30%",
-   "fee": 3000,
-   "pool": "0x20fB28b6209eD80eeE40894BAA9a199C07B03e55",
-   "amtA": 382.92480211979915,
-   "amtB": 178903.994868,
-   "depthUsd": 53609.472296771884
+   "amtA": 1.42559646,
+   "amtB": 28.0418947605369,
+   "depthUsd": 53644.14467690709
   },
   {
    "tokenA": "USDC.e",
@@ -449,9 +438,9 @@
    "feeLabel": "dyn",
    "fee": 0,
    "pool": "0x55CAaBB0d2b704FD0eF8192A7E35D8837e678207",
-   "amtA": 50417.38527,
-   "amtB": 36.79045861385903,
-   "depthUsd": 50417.38527
+   "amtA": 52925.943783,
+   "amtB": 35.83956607004785,
+   "depthUsd": 52925.943783
   },
   {
    "tokenA": "USDT",
@@ -460,9 +449,9 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0xc2755915a85C6f6c1C0F3a86ac8C058F11Caa9C9",
-   "amtA": 64111.63632,
-   "amtB": 24.538644701337713,
-   "depthUsd": 46942.42731365904
+   "amtA": 64266.241485,
+   "amtB": 24.48002442914439,
+   "depthUsd": 46830.28673295322
   },
   {
    "tokenA": "WETH",
@@ -471,9 +460,9 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0xc4e595acDD7d12feC385E5dA5D43160e8A0bAC0E",
-   "amtA": 24.518561362584364,
-   "amtB": 610221.817203592,
-   "depthUsd": 45766.63629026941
+   "amtA": 24.367889449595324,
+   "amtB": 614148.2607353006,
+   "depthUsd": 46061.11955514755
   },
   {
    "tokenA": "USDT",
@@ -482,9 +471,20 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0x33016DF701b323c33cc027146c6a9e0997B2a923",
-   "amtA": 50196.754774,
-   "amtB": 0.721302,
-   "depthUsd": 45442.026
+   "amtA": 51167.491117,
+   "amtB": 0.7190607,
+   "depthUsd": 45300.8241
+  },
+  {
+   "tokenA": "AAVE",
+   "tokenB": "USDT",
+   "venue": "uniV3",
+   "feeLabel": "0.30%",
+   "fee": 3000,
+   "pool": "0x20fB28b6209eD80eeE40894BAA9a199C07B03e55",
+   "amtA": 322.61739542705135,
+   "amtB": 187669.622503,
+   "depthUsd": 45166.43535978719
   },
   {
    "tokenA": "LINK",
@@ -493,20 +493,9 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0x74D23F21F780CA26B47Db16B0504F2e3832b9321",
-   "amtA": 4995.844821330363,
-   "amtB": 23.4464435121402,
-   "depthUsd": 44853.0464387242
-  },
-  {
-   "tokenA": "USDC.e",
-   "tokenB": "WETH",
-   "venue": "sushiV2",
-   "feeLabel": "0.30%",
-   "fee": 3000,
-   "pool": "0x34965ba0ac2451A34a0471F04CCa3F990b8dea27",
-   "amtA": 58371.506319,
-   "amtB": 22.343102282435485,
-   "depthUsd": 42742.35466629908
+   "amtA": 4982.3108134565555,
+   "amtB": 23.510905257795446,
+   "depthUsd": 44976.36175816269
   },
   {
    "tokenA": "GHST",
@@ -515,9 +504,20 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0x096C5CCb33cFc5732Bcd1f3195C13dBeFC4c82f4",
-   "amtA": 681801.1227861326,
-   "amtB": 42597.798352,
-   "depthUsd": 42597.798352
+   "amtA": 680851.6242280437,
+   "amtB": 42658.313832,
+   "depthUsd": 42658.313832
+  },
+  {
+   "tokenA": "USDC.e",
+   "tokenB": "WETH",
+   "venue": "sushiV2",
+   "feeLabel": "0.30%",
+   "fee": 3000,
+   "pool": "0x34965ba0ac2451A34a0471F04CCa3F990b8dea27",
+   "amtA": 58505.742345,
+   "amtB": 22.291569535365607,
+   "depthUsd": 42643.7725211544
   },
   {
    "tokenA": "USDT",
@@ -526,31 +526,9 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0x604229c960e5CACF2aaEAc8Be68Ac07BA9dF81c3",
-   "amtA": 58466.138256,
-   "amtB": 556781.612847352,
-   "depthUsd": 41758.62096355141
-  },
-  {
-   "tokenA": "WETH",
-   "tokenB": "WPOL",
-   "venue": "uniV3",
-   "feeLabel": "0.05%",
-   "fee": 500,
-   "pool": "0x86f1d8390222A3691C28938eC7404A1661E618e0",
-   "amtA": 20.70436267250331,
-   "amtB": 1104620.6361149445,
-   "depthUsd": 39607.44579249884
-  },
-  {
-   "tokenA": "USDC.e",
-   "tokenB": "WPOL",
-   "venue": "uniV3",
-   "feeLabel": "0.05%",
-   "fee": 500,
-   "pool": "0xA374094527e1673A86dE625aa59517c5dE346d32",
-   "amtA": 38810.71491,
-   "amtB": 1205947.5482787814,
-   "depthUsd": 38810.71491
+   "amtA": 58236.178327,
+   "amtB": 559137.9592211089,
+   "depthUsd": 41935.34694158317
   },
   {
    "tokenA": "WETH",
@@ -559,9 +537,20 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0x167384319B41F7094e62f7506409Eb38079AbfF8",
-   "amtA": 20.26634356756046,
-   "amtB": 1209291.5172672484,
-   "depthUsd": 38769.51524474316
+   "amtA": 20.05286565660539,
+   "amtB": 1214875.841401797,
+   "depthUsd": 38361.132001086116
+  },
+  {
+   "tokenA": "USDC.e",
+   "tokenB": "WPOL",
+   "venue": "uniV3",
+   "feeLabel": "0.05%",
+   "fee": 500,
+   "pool": "0xA374094527e1673A86dE625aa59517c5dE346d32",
+   "amtA": 38258.73021,
+   "amtB": 1211503.7881561662,
+   "depthUsd": 38258.73021
   },
   {
    "tokenA": "LINK",
@@ -570,9 +559,9 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0x5cA6CA6c3709E1E6CFe74a50Cf6B2B6BA2Dadd67",
-   "amtA": 4169.651161690428,
-   "amtB": 19.590083077527375,
-   "depthUsd": 37475.82892730987
+   "amtA": 4161.75589251658,
+   "amtB": 19.627773370678288,
+   "depthUsd": 37547.93045810756
   },
   {
    "tokenA": "USDC.e",
@@ -581,9 +570,20 @@
    "feeLabel": "dyn",
    "fee": 0,
    "pool": "0x7B925e617aefd7FB3a93Abe3a701135D7a1Ba710",
-   "amtA": 38017.74158,
-   "amtB": 36944.512701,
-   "depthUsd": 36944.512701
+   "amtA": 37585.509841,
+   "amtB": 37378.385007,
+   "depthUsd": 37378.385007
+  },
+  {
+   "tokenA": "WETH",
+   "tokenB": "WPOL",
+   "venue": "uniV3",
+   "feeLabel": "0.05%",
+   "fee": 500,
+   "pool": "0x86f1d8390222A3691C28938eC7404A1661E618e0",
+   "amtA": 19.369599747315952,
+   "amtB": 1140263.2269789046,
+   "depthUsd": 37054.044316615415
   },
   {
    "tokenA": "UNI",
@@ -592,42 +592,9 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0x357faF5843c7FD7fb4E34FBEabDAc16eabE8a5bc",
-   "amtA": 8169.0568123230905,
-   "amtB": 39.94395964537438,
-   "depthUsd": 35943.8499742216
-  },
-  {
-   "tokenA": "WETH",
-   "tokenB": "WPOL",
-   "venue": "sushiV3",
-   "feeLabel": "0.05%",
-   "fee": 500,
-   "pool": "0xf1A12338D39Fc085D8631E1A745B5116BC9b2A32",
-   "amtA": 18.01043940094926,
-   "amtB": 1257753.4042218206,
-   "depthUsd": 34453.97057401593
-  },
-  {
-   "tokenA": "USDC",
-   "tokenB": "WETH",
-   "venue": "quickV3",
-   "feeLabel": "dyn",
-   "fee": 0,
-   "pool": "0xa6AeDF7c4Ed6e821E67a6BfD56FD1702aD9a9719",
-   "amtA": 37694.646315,
-   "amtB": 17.921523219352363,
-   "depthUsd": 34283.873918621066
-  },
-  {
-   "tokenA": "DAI",
-   "tokenB": "WETH",
-   "venue": "sushiV2",
-   "feeLabel": "0.30%",
-   "fee": 3000,
-   "pool": "0x6FF62bfb8c12109E8000935A6De54daD83a4f39f",
-   "amtA": 45797.0192646077,
-   "amtB": 17.51566378434901,
-   "depthUsd": 33507.46481945965
+   "amtA": 8017.79418293278,
+   "amtB": 40.48036730056386,
+   "depthUsd": 35278.294404904234
   },
   {
    "tokenA": "USDC.e",
@@ -636,9 +603,42 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0xcd353F79d9FADe311fC3119B841e1f456b54e858",
-   "amtA": 46739.656335,
-   "amtB": 444849.16060303955,
-   "depthUsd": 33363.68704522797
+   "amtA": 46574.343857,
+   "amtB": 446518.45054658083,
+   "depthUsd": 33488.88379099356
+  },
+  {
+   "tokenA": "DAI",
+   "tokenB": "WETH",
+   "venue": "sushiV2",
+   "feeLabel": "0.30%",
+   "fee": 3000,
+   "pool": "0x6FF62bfb8c12109E8000935A6De54daD83a4f39f",
+   "amtA": 45867.53896914056,
+   "amtB": 17.488892712160474,
+   "depthUsd": 33456.25175836299
+  },
+  {
+   "tokenA": "USDC",
+   "tokenB": "WETH",
+   "venue": "quickV3",
+   "feeLabel": "dyn",
+   "fee": 0,
+   "pool": "0xa6AeDF7c4Ed6e821E67a6BfD56FD1702aD9a9719",
+   "amtA": 37621.821148,
+   "amtB": 17.44120075442833,
+   "depthUsd": 33365.01704322139
+  },
+  {
+   "tokenA": "WETH",
+   "tokenB": "WPOL",
+   "venue": "sushiV3",
+   "feeLabel": "0.05%",
+   "fee": 500,
+   "pool": "0xf1A12338D39Fc085D8631E1A745B5116BC9b2A32",
+   "amtA": 17.177543275361604,
+   "amtB": 1279170.6542976203,
+   "depthUsd": 32860.64028576674
   },
   {
    "tokenA": "USDC.e",
@@ -647,9 +647,9 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0x0e44cEb592AcFC5D3F09D996302eB4C499ff8c10",
-   "amtA": 64244.70408,
-   "amtB": 15.985771119365339,
-   "depthUsd": 30580.780151345894
+   "amtA": 64502.567882,
+   "amtB": 15.888146794211748,
+   "depthUsd": 30394.024817327074
   },
   {
    "tokenA": "USDC",
@@ -658,9 +658,9 @@
    "feeLabel": "0.05%",
    "fee": 500,
    "pool": "0x32FAE204835e08b9374493d6B4628FD1F87DD045",
-   "amtA": 82654.311255,
-   "amtB": 0.4445212,
-   "depthUsd": 28004.8356
+   "amtA": 82815.675262,
+   "amtB": 0.4426625,
+   "depthUsd": 27887.7375
   },
   {
    "tokenA": "USDC",
@@ -680,9 +680,9 @@
    "feeLabel": "1.00%",
    "fee": 10000,
    "pool": "0xfaE91e08188332ED6Ea09b314BBE3FC6cD1432C1",
-   "amtA": 268.70355567231053,
-   "amtB": 2005.6152163259821,
-   "depthUsd": 22061.767379585803
+   "amtA": 251.9699320689983,
+   "amtB": 2199.9036633754386,
+   "depthUsd": 24198.940297129822
   },
   {
    "tokenA": "DAI",
@@ -691,42 +691,9 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0x4A35582a710E1F4b2030A3F826DA20BfB6703C09",
-   "amtA": 30074.94745927935,
-   "amtB": 11.512125606924728,
-   "depthUsd": 22022.696286047005
-  },
-  {
-   "tokenA": "USDC.e",
-   "tokenB": "WPOL",
-   "venue": "quickV3",
-   "feeLabel": "dyn",
-   "fee": 0,
-   "pool": "0xAE81FAc689A1b4b1e06e7ef4a2ab4CD8aC0A087D",
-   "amtA": 21412.322964,
-   "amtB": 378677.64076753106,
-   "depthUsd": 21412.322964
-  },
-  {
-   "tokenA": "AAVE",
-   "tokenB": "WETH",
-   "venue": "quickV2",
-   "feeLabel": "0.30%",
-   "fee": 3000,
-   "pool": "0x90bc3E68Ba8393a3Bf2D79309365089975341a43",
-   "amtA": 207.8799882540367,
-   "amtB": 11.147363814573655,
-   "depthUsd": 21324.906977279403
-  },
-  {
-   "tokenA": "AAVE",
-   "tokenB": "WPOL",
-   "venue": "uniV3",
-   "feeLabel": "0.30%",
-   "fee": 3000,
-   "pool": "0xa9077cDB3D13F45B8B9d87C43E11bCe0e73d8631",
-   "amtA": 150.56130642671835,
-   "amtB": 476335.04225197603,
-   "depthUsd": 21078.582899740566
+   "amtA": 30133.889656660795,
+   "amtB": 11.489723247737569,
+   "depthUsd": 21979.840572921967
   },
   {
    "tokenA": "USDC.e",
@@ -735,20 +702,31 @@
    "feeLabel": "0.05%",
    "fee": 500,
    "pool": "0x3F5228d0e7D75467366be7De2c31D0d098bA2C23",
-   "amtA": 20875.078221,
-   "amtB": 75038.08892,
-   "depthUsd": 20875.078221
+   "amtA": 21827.197055,
+   "amtB": 74085.962888,
+   "depthUsd": 21827.197055
   },
   {
-   "tokenA": "WETH",
+   "tokenA": "AAVE",
+   "tokenB": "WETH",
+   "venue": "quickV2",
+   "feeLabel": "0.30%",
+   "fee": 3000,
+   "pool": "0x90bc3E68Ba8393a3Bf2D79309365089975341a43",
+   "amtA": 205.8770291129735,
+   "amtB": 11.257502268320147,
+   "depthUsd": 21535.60183929644
+  },
+  {
+   "tokenA": "USDC.e",
    "tokenB": "WPOL",
    "venue": "quickV3",
    "feeLabel": "dyn",
    "fee": 0,
-   "pool": "0x479e1B71A702a595e19b6d5932CD5c863ab57ee0",
-   "amtA": 10.629476811392834,
-   "amtB": 526089.7151698974,
-   "depthUsd": 20334.18914019449
+   "pool": "0xAE81FAc689A1b4b1e06e7ef4a2ab4CD8aC0A087D",
+   "amtA": 21082.823872,
+   "amtB": 382016.06266660034,
+   "depthUsd": 21082.823872
   },
   {
    "tokenA": "DAI",
@@ -757,9 +735,20 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0x74214F5d8AA71b8dc921D8A963a1Ba3605050781",
-   "amtA": 19879.36965441484,
-   "amtB": 20864.550203237566,
-   "depthUsd": 19879.36965441484
+   "amtA": 19876.351280875246,
+   "amtB": 20867.72817613982,
+   "depthUsd": 19876.351280875246
+  },
+  {
+   "tokenA": "WETH",
+   "tokenB": "WPOL",
+   "venue": "quickV3",
+   "feeLabel": "dyn",
+   "fee": 0,
+   "pool": "0x479e1B71A702a595e19b6d5932CD5c863ab57ee0",
+   "amtA": 9.8417829116064,
+   "amtB": 545985.5268548959,
+   "depthUsd": 18827.330709903043
   },
   {
    "tokenA": "USDC",
@@ -768,9 +757,9 @@
    "feeLabel": "dyn",
    "fee": 0,
    "pool": "0x6669B4706cC152F359e947BCa68E263A87c52634",
-   "amtA": 19335.071832,
-   "amtB": 287902.2609308714,
-   "depthUsd": 19335.071832
+   "amtA": 18796.607662,
+   "amtB": 293239.3330542437,
+   "depthUsd": 18796.607662
   },
   {
    "tokenA": "DAI",
@@ -784,26 +773,26 @@
    "depthUsd": 18681.590682820497
   },
   {
-   "tokenA": "CRV",
-   "tokenB": "WETH",
-   "venue": "sushiV2",
-   "feeLabel": "0.30%",
-   "fee": 3000,
-   "pool": "0x396E655C309676cAF0acf4607a868e0CDed876dB",
-   "amtA": 73962.70678921297,
-   "amtB": 9.70026702682089,
-   "depthUsd": 18556.610822308365
-  },
-  {
    "tokenA": "WBTC",
    "tokenB": "WETH",
    "venue": "uniV3",
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0xfe343675878100b344802A6763fd373fDeed07A4",
-   "amtA": 0.29301223,
-   "amtB": 105.99137999853096,
-   "depthUsd": 18459.77049
+   "amtA": 0.29282515,
+   "amtB": 105.99703179515795,
+   "depthUsd": 18447.98445
+  },
+  {
+   "tokenA": "CRV",
+   "tokenB": "WETH",
+   "venue": "sushiV2",
+   "feeLabel": "0.30%",
+   "fee": 3000,
+   "pool": "0x396E655C309676cAF0acf4607a868e0CDed876dB",
+   "amtA": 74713.73156924598,
+   "amtB": 9.603987890538006,
+   "depthUsd": 18372.428834599206
   },
   {
    "tokenA": "DAI",
@@ -812,9 +801,9 @@
    "feeLabel": "dyn",
    "fee": 0,
    "pool": "0xe7E0eB9F6bCcCfe847fDf62a3628319a092F11a2",
-   "amtA": 18122.50419148997,
-   "amtB": 27346.750152,
-   "depthUsd": 18122.50419148997
+   "amtA": 17624.3903203964,
+   "amtB": 27847.788482,
+   "depthUsd": 17624.3903203964
   },
   {
    "tokenA": "AAVE",
@@ -823,31 +812,20 @@
    "feeLabel": "dyn",
    "fee": 0,
    "pool": "0x44720A6f572649526Ac9073caE9200755cc78e0A",
-   "amtA": 128.28399038510503,
-   "amtB": 9.506997700056395,
-   "depthUsd": 17959.7586539147
-  },
-  {
-   "tokenA": "LINK",
-   "tokenB": "WPOL",
-   "venue": "uniV3",
-   "feeLabel": "0.05%",
-   "fee": 500,
-   "pool": "0x0A28C2F5E0E8463E047C203F00F649812aE67E4f",
-   "amtA": 1497.055445297086,
-   "amtB": 534473.3155331342,
-   "depthUsd": 16467.609898267947
+   "amtA": 115.2003579653775,
+   "amtB": 10.224973172970389,
+   "depthUsd": 16128.050115152852
   },
   {
    "tokenA": "AAVE",
-   "tokenB": "WETH",
+   "tokenB": "WPOL",
    "venue": "uniV3",
-   "feeLabel": "0.05%",
-   "fee": 500,
-   "pool": "0x25FB97799F80433e422f47E75173314e54dAE174",
-   "amtA": 115.76372324521645,
-   "amtB": 8.9450518891215,
-   "depthUsd": 16206.921254330304
+   "feeLabel": "0.30%",
+   "fee": 3000,
+   "pool": "0xa9077cDB3D13F45B8B9d87C43E11bCe0e73d8631",
+   "amtA": 113.9959147416175,
+   "amtB": 530002.5570322812,
+   "depthUsd": 15959.428063826448
   },
   {
    "tokenA": "USDC",
@@ -856,9 +834,20 @@
    "feeLabel": "dyn",
    "fee": 0,
    "pool": "0xEecB5Db986c20a8C88D8332E7e252A9671565751",
-   "amtA": 15765.717168,
-   "amtB": 15777.981947,
-   "depthUsd": 15765.717168
+   "amtA": 15739.614799,
+   "amtB": 15804.094355,
+   "depthUsd": 15739.614799
+  },
+  {
+   "tokenA": "AAVE",
+   "tokenB": "WETH",
+   "venue": "uniV3",
+   "feeLabel": "0.05%",
+   "fee": 500,
+   "pool": "0x25FB97799F80433e422f47E75173314e54dAE174",
+   "amtA": 111.89980789022003,
+   "amtB": 9.158649106378704,
+   "depthUsd": 15665.973104630804
   },
   {
    "tokenA": "USDC",
@@ -867,9 +856,31 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0x19C5505638383337D2972Ce68B493aD78E315147",
-   "amtA": 15279.735884,
-   "amtB": 8.39978440091037,
-   "depthUsd": 15279.735884
+   "amtA": 15475.832536,
+   "amtB": 8.325475880244412,
+   "depthUsd": 15475.832536
+  },
+  {
+   "tokenA": "LINK",
+   "tokenB": "WPOL",
+   "venue": "uniV3",
+   "feeLabel": "0.05%",
+   "fee": 500,
+   "pool": "0x0A28C2F5E0E8463E047C203F00F649812aE67E4f",
+   "amtA": 1386.7554499653165,
+   "amtB": 547806.4837379896,
+   "depthUsd": 15254.309949618482
+  },
+  {
+   "tokenA": "USDC.e",
+   "tokenB": "WBTC",
+   "venue": "quickV3",
+   "feeLabel": "dyn",
+   "fee": 0,
+   "pool": "0xA5CD8351Cbf30B531C7b11B0D9d3Ff38eA2E280f",
+   "amtA": 18204.379897,
+   "amtB": 0.24183443,
+   "depthUsd": 15235.56909
   },
   {
    "tokenA": "DAI",
@@ -894,37 +905,15 @@
    "depthUsd": 14028.941898295421
   },
   {
-   "tokenA": "USDC.e",
-   "tokenB": "WBTC",
-   "venue": "quickV3",
-   "feeLabel": "dyn",
-   "fee": 0,
-   "pool": "0xA5CD8351Cbf30B531C7b11B0D9d3Ff38eA2E280f",
-   "amtA": 19855.867404,
-   "amtB": 0.2214288,
-   "depthUsd": 13950.0144
-  },
-  {
    "tokenA": "DAI",
    "tokenB": "USDT",
    "venue": "quickV3",
    "feeLabel": "dyn",
    "fee": 0,
    "pool": "0xefFA9E5e63ba18160Ee26BdA56b42F3368719615",
-   "amtA": 12387.182948986543,
-   "amtB": 21975.152908,
-   "depthUsd": 12387.182948986543
-  },
-  {
-   "tokenA": "USDT",
-   "tokenB": "WPOL",
-   "venue": "uniV3",
-   "feeLabel": "0.30%",
-   "fee": 3000,
-   "pool": "0x781067Ef296E5C4A4203F81C593274824b7C185d",
-   "amtA": 11488.182462,
-   "amtB": 324155.3420416173,
-   "depthUsd": 11488.182462
+   "amtA": 11777.882520807556,
+   "amtB": 22585.188539,
+   "depthUsd": 11777.882520807556
   },
   {
    "tokenA": "USDC.e",
@@ -933,9 +922,20 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0x4B1F1e2435A9C96f7330FAea190Ef6A7C8D70001",
-   "amtA": 11233.744201,
-   "amtB": 11244.920904,
-   "depthUsd": 11233.744201
+   "amtA": 11233.744207,
+   "amtB": 11244.920899,
+   "depthUsd": 11233.744207
+  },
+  {
+   "tokenA": "USDT",
+   "tokenB": "WPOL",
+   "venue": "uniV3",
+   "feeLabel": "0.30%",
+   "fee": 3000,
+   "pool": "0x781067Ef296E5C4A4203F81C593274824b7C185d",
+   "amtA": 11199.657242,
+   "amtB": 326972.7848472584,
+   "depthUsd": 11199.657242
   },
   {
    "tokenA": "USDC.e",
@@ -944,42 +944,9 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0x847b64f9d3A95e977D157866447a5C0A5dFa0Ee5",
-   "amtA": 22484.590572,
-   "amtB": 0.17420907,
-   "depthUsd": 10975.17141
-  },
-  {
-   "tokenA": "USDT",
-   "tokenB": "WPOL",
-   "venue": "quickV3",
-   "feeLabel": "dyn",
-   "fee": 0,
-   "pool": "0x5b41EEDCfC8e0AE47493d4945Aa1AE4fe05430ff",
-   "amtA": 9873.470423,
-   "amtB": 319948.21955329634,
-   "depthUsd": 9873.470423
-  },
-  {
-   "tokenA": "USDC",
-   "tokenB": "WETH",
-   "venue": "quickV2",
-   "feeLabel": "0.30%",
-   "fee": 3000,
-   "pool": "0x7bAF833f82BB1971f99A5a5d84bED1d5D0dEDD70",
-   "amtA": 13310.012086,
-   "amtB": 5.085453250196118,
-   "depthUsd": 9728.472067625175
-  },
-  {
-   "tokenA": "USDT",
-   "tokenB": "WETH",
-   "venue": "quickV3",
-   "feeLabel": "dyn",
-   "fee": 0,
-   "pool": "0x9CEff2F5138fC59eB925d270b8A7A9C02a1810f2",
-   "amtA": 38457.983589,
-   "amtB": 5.07209054142095,
-   "depthUsd": 9702.909205738277
+   "amtA": 22495.80774,
+   "amtB": 0.17407389,
+   "depthUsd": 10966.65507
   },
   {
    "tokenA": "LINK",
@@ -988,9 +955,20 @@
    "feeLabel": "dyn",
    "fee": 0,
    "pool": "0xAb52931301078E2405c3a3EBB86e11ad0dFD2CfD",
-   "amtA": 1732.6017519486732,
-   "amtB": 4.989301462813838,
-   "depthUsd": 9544.533698362871
+   "amtA": 1709.5751801338151,
+   "amtB": 5.099248377910893,
+   "depthUsd": 9754.862146943538
+  },
+  {
+   "tokenA": "USDC",
+   "tokenB": "WETH",
+   "venue": "quickV2",
+   "feeLabel": "0.30%",
+   "fee": 3000,
+   "pool": "0x7bAF833f82BB1971f99A5a5d84bED1d5D0dEDD70",
+   "amtA": 13327.635128,
+   "amtB": 5.078782590924122,
+   "depthUsd": 9715.711096437846
   },
   {
    "tokenA": "USDC",
@@ -999,9 +977,20 @@
    "feeLabel": "dyn",
    "fee": 0,
    "pool": "0xdb975b96828352880409e86d5aE93c23c924f812",
-   "amtA": 15763.473679,
-   "amtB": 0.15149553,
-   "depthUsd": 9544.21839
+   "amtA": 15869.000889,
+   "amtB": 0.15021193,
+   "depthUsd": 9463.35159
+  },
+  {
+   "tokenA": "USDT",
+   "tokenB": "WPOL",
+   "venue": "quickV3",
+   "feeLabel": "dyn",
+   "fee": 0,
+   "pool": "0x5b41EEDCfC8e0AE47493d4945Aa1AE4fe05430ff",
+   "amtA": 9382.005712,
+   "amtB": 324766.3110738896,
+   "depthUsd": 9382.005712
   },
   {
    "tokenA": "USDT",
@@ -1010,9 +999,9 @@
    "feeLabel": "0.05%",
    "fee": 500,
    "pool": "0xa1cfb393607d1a6888D273b762832ed14C8b56b1",
-   "amtA": 9162.107788,
-   "amtB": 0.33577944,
-   "depthUsd": 9162.107788
+   "amtA": 9309.428447,
+   "amtB": 0.33410576,
+   "depthUsd": 9309.428447
   },
   {
    "tokenA": "AAVE",
@@ -1021,9 +1010,20 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0xa236278beC0e0677A48527340cfB567b4E6e9AdC",
-   "amtA": 230.96574018858186,
-   "amtB": 8876.885968,
-   "depthUsd": 8876.885968
+   "amtA": 229.15752852932994,
+   "amtB": 9139.968293,
+   "depthUsd": 9139.968293
+  },
+  {
+   "tokenA": "USDT",
+   "tokenB": "WETH",
+   "venue": "quickV3",
+   "feeLabel": "dyn",
+   "fee": 0,
+   "pool": "0x9CEff2F5138fC59eB925d270b8A7A9C02a1810f2",
+   "amtA": 39986.993273,
+   "amtB": 4.4922028322089576,
+   "depthUsd": 8593.584018015736
   },
   {
    "tokenA": "CRV",
@@ -1032,9 +1032,9 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0x4D05f2A005e6F36633778416764E82d1D12E7fbb",
-   "amtA": 28256.901129082642,
-   "amtB": 184399.62661967266,
-   "depthUsd": 7911.93231614314
+   "amtA": 28474.720084391294,
+   "amtB": 183793.8178170185,
+   "depthUsd": 7972.9216236295615
   },
   {
    "tokenA": "GHST",
@@ -1043,9 +1043,20 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0xcCB9d2100037f1253e6C1682AdF7dC9944498AFF",
-   "amtA": 165107.6395514164,
-   "amtB": 3.946461128069113,
-   "depthUsd": 7549.580137996213
+   "amtA": 165343.11441563396,
+   "amtB": 3.9409510604908538,
+   "depthUsd": 7539.039378719003
+  },
+  {
+   "tokenA": "DAI",
+   "tokenB": "WPOL",
+   "venue": "uniV3",
+   "feeLabel": "0.30%",
+   "fee": 3000,
+   "pool": "0xFE530931dA161232Ec76A7c3bEA7D36cF3811A0d",
+   "amtA": 7414.851324901634,
+   "amtB": 167244.39307041775,
+   "depthUsd": 7414.851324901634
   },
   {
    "tokenA": "DAI",
@@ -1059,37 +1070,26 @@
    "depthUsd": 7295.356346809446
   },
   {
-   "tokenA": "UNI",
-   "tokenB": "USDC.e",
-   "venue": "uniV3",
-   "feeLabel": "0.30%",
-   "fee": 3000,
-   "pool": "0x74D3c85df4dbd03c7C12f7649FAa6457610e7604",
-   "amtA": 1576.6193705219764,
-   "amtB": 22336.049833,
-   "depthUsd": 6937.125230296696
-  },
-  {
    "tokenA": "GHST",
    "tokenB": "WPOL",
    "venue": "sushiV2",
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0xf69e93771F11AECd8E554aA165C3Fe7fd811530c",
-   "amtA": 152428.09528541824,
-   "amtB": 90244.87873502607,
-   "depthUsd": 6768.365905126954
+   "amtA": 151594.0739615715,
+   "amtB": 90751.49779168243,
+   "depthUsd": 6806.362334376182
   },
   {
-   "tokenA": "DAI",
-   "tokenB": "WPOL",
+   "tokenA": "UNI",
+   "tokenB": "USDC.e",
    "venue": "uniV3",
    "feeLabel": "0.30%",
    "fee": 3000,
-   "pool": "0xFE530931dA161232Ec76A7c3bEA7D36cF3811A0d",
-   "amtA": 6261.406460758013,
-   "amtB": 179123.2790923835,
-   "depthUsd": 6261.406460758013
+   "pool": "0x74D3c85df4dbd03c7C12f7649FAa6457610e7604",
+   "amtA": 1461.5165358680322,
+   "amtB": 23441.010931,
+   "depthUsd": 6430.672757819341
   },
   {
    "tokenA": "UNI",
@@ -1098,9 +1098,9 @@
    "feeLabel": "0.30%",
    "fee": 3000,
    "pool": "0xF7135272a5584Eb116f5a77425118a8B4A2ddfDb",
-   "amtA": 1254.3093666273428,
-   "amtB": 4.243634609984632,
-   "depthUsd": 5518.961213160308
+   "amtA": 1248.387183702902,
+   "amtB": 4.264695643805233,
+   "depthUsd": 5492.903608292769
   }
  ]
 }
